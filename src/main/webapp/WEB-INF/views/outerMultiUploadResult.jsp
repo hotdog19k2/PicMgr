@@ -69,10 +69,10 @@
 	</div>
 	<div id="content">
 	작성자 : ${login.uid } <br>
-	
+	   <a href="displayFile?filename=${bigImg }" target="_blank"></a>
 	<c:forEach items="${fullList }" var="item">
 		<div class="imgBox">
-	<img src="displayFile?fullList=${item }"><button type="button" class="del">삭제</button>
+	<a href ="displayFile?fullList=${item }" target="_blank"><img src="displayFile?fullList=${item }"></a><button type="button" class="del">삭제</button>
 	<input type="hidden"value="${item }" class="fullname">
 		</div>
 	</c:forEach>
@@ -91,6 +91,8 @@
 			}
 		}); 
 	});
+	
+	
 	</script>
 	
 	<!-- 브라우저가 이미지의 파일 경로를 가져오려는데 src가 서버의 command이면 server에 display시킴 -->
